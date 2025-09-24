@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Virtual - ReisTech</title>
+  <link rel="stylesheet" href="E-comerce.css">
+  <link rel="icon" href="img/R sozinho.png" type="image/png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <h1 class="logo">ReisTech Store</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#carrinho">Carrinho (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PRODUTOS -->
+  <section id="produtos" class="container">
+    <h2>Produtos</h2>
+    <div class="produtos-grid" id="produtos-grid">
+      <!-- Produtos gerados pelo JS -->
+    </div>
+  </section>
+
+  <!-- CARRINHO -->
+  <section id="carrinho" class="container">
+    <h2>Carrinho</h2>
+    <div id="cart-items">
+      <p>Seu carrinho está vazio.</p>
+    </div>
+    <p id="total">Total: R$ 0,00</p>
+    <button id="checkout-btn">Finalizar Compra</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 ReisTech. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="E-comerce.js"></script>
+</body>
+</html>
