@@ -194,8 +194,7 @@ ul {
 
 /* Início */
 .inicio {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  width: 100vw;
   background-image: radial-gradient(#6a0dad, black);
   display: flex;
   align-items: center;
