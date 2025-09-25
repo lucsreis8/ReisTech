@@ -21,79 +21,164 @@ ul {
   list-style: none;
 }
 
-/* Header fixo */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(20, 20, 20, 0.95);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 70px;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+/* ======= MOBILE ======= */
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* centraliza logo */
+    align-items: center;
+    position: relative;
+  }
+
+  /* Logo centralizada */
+  header .logo {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  header .logo img {
+    height: 35px;
+  }
+
+  /* Hamburguer no canto esquerdo */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1100;
+    position: absolute;
+    left: 20px;
+  }
+
+  /* Menu dropdown */
+  header nav .menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    left: 20px; /* abre a partir da esquerda */
+    background: rgba(20, 20, 20, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+
+  header nav .menu.active {
+    display: flex;
+  }
+
+  /* Links */
+  header nav .menu li a {
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: left;
+  }
+
+  /* Botão orçamento dentro do menu no mobile */
+  .btn-orcamento-header {
+    display: none;
+  }
 }
 
-/* Logo */
-header .logo img {
+
+
+/* ======= DESKTOP ======= */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  header {
+    width: 100vw;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between; /* espaço entre logo / menu / botão */
+    align-items: center;
+    padding: 10px 90px;
+  }
+
+  header .logo img {
   height: 40px;
   width: auto;
+  margin-right: 500px;
 }
 
-/* Menu */
-header nav .menu {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-  margin-left: 450px;
-}
 
-header nav .menu li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s;
-  font-size: 1rem;
-}
+  /* Menu centralizado */
+  header nav .menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    margin: 0; /* tira aquele deslocamento forçado */
+  }
 
-/* underline animado */
-header nav .menu li a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: #1e90ff;
-  transition: width 0.3s ease;
-}
+  /* Links animados */
+  header nav .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
 
-header nav .menu li a:hover::after {
-  width: 100%;
-}
+  /* underline animado */
+  header nav .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1e90ff;
+    transition: width 0.3s ease;
+  }
 
-header nav .menu li a:hover {
-  color: #1e90ff;
-}
+  header nav .menu li a:hover::after {
+    width: 100%;
+  }
 
-/* Botão orçamento no header */
-.btn-orcamento-header {
-  background: #6a0dad;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
+  header nav .menu li a:hover {
+    color: #1e90ff;
+  }
 
-.btn-orcamento-header:hover {
-  background: #1e90ff;
-  color: #000;
-  transform: scale(1.05);
+  /* Botão orçamento fixo à direita */
+  .orcamento {
+    margin-left: auto;
+  }
+
+  .btn-orcamento-header {
+    background: #6a0dad;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn-orcamento-header:hover {
+    background: #1e90ff;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  /* Esconde orçamento mobile */
+  .orcamento-mobile {
+    display: none;
+  }
 }
 
 /* Canvas de fundo animado */
@@ -109,6 +194,8 @@ header nav .menu li a:hover {
 
 /* Início */
 .inicio {
+  width: 100%;
+  aspect-ratio: 16 / 9;
   background-image: radial-gradient(#6a0dad, black);
   display: flex;
   align-items: center;
@@ -144,7 +231,6 @@ header nav .menu li a:hover {
 
   .inicio-imagem img {
     max-width: 100%;
-    border-radius: 12px;
   }
 }
 
@@ -165,19 +251,28 @@ header nav .menu li a:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-width: 800px; /* aumenta a largura máxima */
+  max-width: 600px; /* aumenta a largura máxima */
   margin: auto;
 }
 
 /* Cards maiores */
 .servico-card {
   background: rgba(255, 255, 255, 0.07);
-  padding: 40px; /* aumenta espaço interno */
+  padding: 20px; /* aumenta espaço interno */
+  padding-top: 40px;
   border-radius: 16px;
   text-align: center;
   transition: 0.3s;
   color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .servico-card {
+    padding: 10px;
+    padding-top: 30px;
+    margin: 30px;
+  }
 }
 
 .servico-card:hover {
@@ -243,6 +338,7 @@ header nav .menu li a:hover {
 
 /* Botão orçamento */
 .btn-orcamento {
+  margin-left: 28px;
   display: inline-block;
   background: #6a0dad;
   color: #fff;
@@ -367,6 +463,20 @@ header nav .menu li a:hover {
   box-shadow: 0 0 40px #6a0dad, 0 0 80px #1e90ff;
 }
 
+@media (max-width: 768px) {
+  .sobre-foto img {
+  width: 180px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #6a0dad, 0 0 60px #1e90ff;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.sobre-foto img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 40px #6a0dad, 0 0 80px #1e90ff;
+} 
+}
+
 .sobre-texto {
   flex: 1;
   min-width: 280px;
@@ -467,61 +577,59 @@ header nav .menu li a:hover {
 .contato-form {
   flex: 2;
   min-width: 280px;
-}
 
-.contato-form h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  position: relative;
-}
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+  }
+  h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #6a0dad, #1e90ff);
+    display: block;
+    margin-top: 10px;
+    border-radius: 2px;
+  }
 
-.contato-form h2::after {
-  content: "";
-  width: 70px;
-  height: 4px;
-  background: linear-gradient(90deg, #6a0dad, #1e90ff);
-  display: block;
-  margin-top: 10px;
-  border-radius: 2px;
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
 
-.contato-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
+  input,
+  textarea {
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
 
-.contato-form input,
-.contato-form textarea {
-  padding: 14px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-  font-size: 1rem;
-  transition: background 0.3s;
-}
+  input:focus,
+  textarea:focus {
+    background: rgba(255, 255, 255, 0.18);
+  }
 
-.contato-form input:focus,
-.contato-form textarea:focus {
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.contato-form button.btn {
-  background: linear-gradient(90deg, #6a0dad, #1e90ff);
-  color: #fff;
-  padding: 14px 22px;
-  border-radius: 8px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.contato-form button.btn:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
+  button.btn {
+    background: linear-gradient(90deg, #6a0dad, #1e90ff);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  button.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
 }
 
 /* Responsivo */
