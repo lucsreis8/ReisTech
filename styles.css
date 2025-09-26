@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +30,6 @@ ul {
     display: flex;
     justify-content: center; /* centraliza logo */
     align-items: center;
-    position: relative;
   }
 
   /* Logo centralizada */
@@ -233,6 +231,32 @@ ul {
   }
 }
 
+@media (max-width: 768px) {
+  .inicio {
+    padding: 100px 50px 20px;
+    gap: 30px;  /* centraliza texto */
+  }
+
+  .inicio-texto {
+    max-width: 100%;
+    margin-right: 50px;          /* tira margem lateral */
+  
+  }
+
+  .inicio-texto a {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .inicio-imagem img {
+    display: none;
+  }
+}
+
+
 /* Section Serviços */
 #servicos {
   padding-top: 120px;
@@ -272,6 +296,14 @@ ul {
     padding-top: 30px;
     margin: 30px;
   }
+
+  .lista-servicos {
+  display: flex;
+  flex-direction: column;
+  
+  max-width: 600px; /* aumenta a largura máxima */
+  margin: auto;
+  } 
 }
 
 .servico-card:hover {
@@ -464,7 +496,8 @@ ul {
 
 @media (max-width: 768px) {
   .sobre-foto img {
-  width: 180px;
+  margin-left: 20px;
+  width: 120px;
   border-radius: 20px;
   box-shadow: 0 0 30px #6a0dad, 0 0 60px #1e90ff;
   transition: transform 0.4s, box-shadow 0.4s;
@@ -477,6 +510,8 @@ ul {
 }
 
 .sobre-texto {
+  margin-right: 20px;
+  font-size: 11px;
   flex: 1;
   min-width: 280px;
 }
