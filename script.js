@@ -76,12 +76,12 @@ document.querySelector("#contato form").addEventListener("submit", function (e) 
   const mensagem = this.querySelector("textarea[name='mensagem']").value;
 
   // Número do WhatsApp (no formato internacional, sem espaços ou traços)
-  const numero = "5564994503282"; // Ex: 55DDDNUMERO → 55 11 912345678
+  const numero = "5561994503282"; // Ex: 55DDDNUMERO → 55 11 912345678
 
   // Monta o texto da mensagem
   const texto = `Olá, meu nome é ${nome}.
-📧 Email: ${email}
-💬 Mensagem: ${mensagem}`;
+  Email: ${email}
+  Mensagem: ${mensagem}`;
 
   // Codifica pra URL
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
