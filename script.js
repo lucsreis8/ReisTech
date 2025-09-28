@@ -67,32 +67,32 @@ document.querySelectorAll(".saiba-mais").forEach(botao => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("#contato form");
+document.querySelector("#contato form").addEventListener("submit", function (e) {
+  e.preventDefault(); // evita reload da página
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  // Pega os valores digitados
+  const nome = this.querySelector("input[name='nome']").value;
+  const email = this.querySelector("input[name='email']").value;
+  const mensagem = this.querySelector("textarea[name='mensagem']").value;
 
-    // Pega os valores do formulário
-    const nome = form.querySelector("input[name='nome']").value.trim();
-    const email = form.querySelector("input[name='email']").value.trim();
-    const mensagem = form.querySelector("textarea[name='mensagem']").value.trim();
+  // Número do WhatsApp (no formato internacional, sem espaços ou traços)
+  const numero = "5564994503282"; // Ex: 55DDDNUMERO → 55 11 912345678
 
-    // Número do WhatsApp (coloque o seu com DDD, sem espaços)
-    const telefone = "5561994503282"; // exemplo: 55 + DDD + número
+  // Monta o texto da mensagem
+  const texto = `Olá, meu nome é ${nome}.
+📧 Email: ${email}
+💬 Mensagem: ${mensagem}`;
 
-    // Monta o texto que vai pro zap
-    const texto = `Olá, meu nome é ${nome}.
-Email: ${email}
-Mensagem: ${mensagem}`;
+  // Codifica pra URL
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
-    // Gera a URL do WhatsApp
-    const url = `https://wa.me/556194503282`;
+  // Abre no WhatsApp
+  window.open(url, "_blank");
 
-    // Abre no WhatsApp
-    window.open(url, "_blank");
-  });
+  // Limpa o formulário
+  this.reset();
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
