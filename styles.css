@@ -30,6 +30,7 @@ ul {
     display: flex;
     justify-content: center; /* centraliza logo */
     align-items: center;
+    z-index: 1000;
   }
 
   /* Logo centralizada */
@@ -191,6 +192,7 @@ ul {
 }
 
 /* Início */
+@media (min-width: 768px) { 
 .inicio {
   width: 100vw;
   background-image: radial-gradient(#6a0dad, black);
@@ -206,7 +208,7 @@ ul {
     margin-left: 50px;
 
     h1 {
-      font-size: 2.5rem;
+      font-size: rem;
       margin-bottom: 20px;
     }
 
@@ -229,32 +231,53 @@ ul {
   .inicio-imagem img {
     max-width: 100%;
   }
+  }
 }
-
 @media (max-width: 768px) {
   .inicio {
-    padding: 100px 50px 20px;
-    gap: 30px;  /* centraliza texto */
-  }
+  width: 100vw;
+  background-image: radial-gradient(#6a0dad, black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 150px;
+  padding-bottom: 120px;
+  gap: 40px;
+}
 
   .inicio-texto {
-    max-width: 100%;
-    margin-right: 50px;          /* tira margem lateral */
-  
-  }
+    margin-left: 28px;
 
-  .inicio-texto a {
-    display: inline-block;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 1rem;
-    padding: 10px 15px;
+    h1 {
+      margin-bottom: 30px;
+      margin-left: 20px;
+      font-size: 30px; 
+    }
+
+    a {
+      color: white;
+      background-color: #6a0dad;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 5px;
+      padding: 9px;
+      margin-top: 300px;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #1e90ff;
+      color: #000;
+    }
   }
 
   .inicio-imagem img {
     display: none;
   }
 }
+
+
 
 
 /* Section Serviços */
@@ -273,7 +296,7 @@ ul {
 .lista-servicos {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   max-width: 600px; /* aumenta a largura máxima */
   margin: auto;
 }
@@ -292,9 +315,10 @@ ul {
 
 @media (max-width: 768px) {
   .servico-card {
+    gap: 0;
     padding: 10px;
     padding-top: 30px;
-    margin: 30px;
+    margin: 0px  20px;
   }
 
   .lista-servicos {
@@ -467,9 +491,8 @@ ul {
 
 /* Sobre */
 #sobre {
-  padding-top: 150px;
+  padding-top: 80px;
   padding-bottom: 100px;
-
   color: #fff;
 }
 
@@ -495,23 +518,70 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .sobre-foto img {
-  margin-left: 20px;
-  width: 120px;
-  border-radius: 20px;
-  box-shadow: 0 0 30px #6a0dad, 0 0 60px #1e90ff;
-  transition: transform 0.4s, box-shadow 0.4s;
+#sobre {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  color: #fff;
 }
 
-.sobre-foto img:hover {
-  transform: scale(1.05) rotate(-2deg);
-  box-shadow: 0 0 40px #6a0dad, 0 0 80px #1e90ff;
+  .sobre-foto img {
+  display: none;
 } 
-}
 
 .sobre-texto {
+  font-size: 17px;
+  padding: 30px;
+  margin: 0px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  
+
+  h2 {
+    text-align: center;
+    font-size: 35px;
+  margin-bottom: 20px;
+  }
+  h2::after {
+  text-align: center;
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #6a0dad;
+  display: block;
+  margin-top: 10px;
+  border-radius: 2px;
+  }
+
+  p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.btn {
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 15px;
+  background: #6a0dad;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #1e90ff;
+  color: black;
+  transform: scale(1.05);
+}
+  }
+}
+
+@media (min-width: 768px) {
+.sobre-texto {
   margin-right: 20px;
-  font-size: 11px;
+  font-size: 17px;
   flex: 1;
   min-width: 280px;
 }
@@ -533,6 +603,7 @@ ul {
 }
 
 .sobre-texto p {
+  font-size: 18px;
   margin-bottom: 15px;
   line-height: 1.6;
   color: #ccc;
@@ -554,6 +625,7 @@ ul {
   background: #1e90ff;
   color: black;
   transform: scale(1.05);
+}
 }
 
 /* Contato */
