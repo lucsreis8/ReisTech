@@ -22,6 +22,9 @@ ul {
 
 /* ======= MOBILE ======= */
 @media (max-width: 768px) {
+  #bg-animation {
+    display: none;
+  }
   header {
     position: fixed;
     background: rgba(0, 0, 0, 0.9);

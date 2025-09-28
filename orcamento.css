@@ -155,12 +155,18 @@ servico {
 }
 
 @media (max-width: 768px) {
+.orcamento-info p {text-align: center;}
+
+.orcamento-info h1 {
+  text-align: center;
+}
+
   .orcamento-info img {
     display: none;
   }
 
   #orcamento {
-    padding: 20px 20px;
+    padding: 20px 0px;
 }
 
 .btn-voltar {
@@ -168,7 +174,7 @@ servico {
 }
 
 .orcamento-form select {
-  color: #000000;
+  color: #838383;
 }
 
 }
