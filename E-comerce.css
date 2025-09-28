@@ -1,134 +1,204 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #f5f5f5;
-  color: #333;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: rgb(22, 1, 43);
+  overflow-x: hidden;
 }
 
-/* HEADER */
-header {
-  background: #1e1e1e;
-  color: #fff;
-  padding: 15px 0;
-  position: sticky;
+/* Canvas de fundo animado */
+#bg-animation {
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* fica atrás do conteúdo */
+  filter: blur(1.5px);
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+/* ======= DESKTOP ======= */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+  header {
+    width: 100vw;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between; /* espaço entre logo / menu / botão */
+    align-items: center;
+    padding: 10px 90px;
+  }
 
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-/* PRODUTOS */
-.container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.produtos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.produto {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.produto img {
-  max-width: 100%;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-.produto h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.produto p {
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
-
-.produto button {
-  background: #1e90ff;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  header .logo img {
   cursor: pointer;
+  height: 40px;
+  width: auto;
+  margin-right: 820px;
 }
 
-.produto button:hover {
-  background: #0b68c1;
+
+  /* Menu centralizado */
+  header nav .menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    margin: 0; /* tira aquele deslocamento forçado */
+  }
+
+  /* Links animados */
+  header nav .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+
+  /* underline animado */
+  header nav .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1e90ff;
+    transition: width 0.3s ease;
+  }
+
+  header nav .menu li a:hover::after {
+    width: 100%;
+  }
+
+  header nav .menu li a:hover {
+    color: #1e90ff;
+  }
+
+  /* Botão orçamento fixo à direita */
+  .orcamento {
+    margin-left: auto;
+  }
+
+  .btn-orcamento-header {
+    background: #6a0dad;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn-orcamento-header:hover {
+    background: #1e90ff;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  /* Esconde orçamento mobile */
+  .orcamento-mobile {
+    display: none;
+  }
 }
 
-/* CARRINHO */
-#cart-items {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  min-height: 100px;
-  margin-bottom: 10px;
-}
-
-#cart-items p {
-  margin-bottom: 10px;
-}
-
-#checkout-btn {
-  background: #28a745;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#checkout-btn:hover {
-  background: #218838;
-}
-
-/* FOOTER */
-footer {
+.caixa {
+  margin: 0px 100px;
+  border-radius: 30px;
+  font-size: 40px;
+  transform: translateY(45vh);
   text-align: center;
-  padding: 20px;
-  background: #1e1e1e;
-  color: #fff;
-  margin-top: 40px;
+  background: linear-gradient(90deg, #6a0dad, #1e90ff);
+  box-shadow: 0 0 25px #6a0dad, 0 0 50px #1e90ff;
+}
+
+@media (max-width: 768px) {
+  #bg-animation {
+    display: none;
+  }
+  header {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* centraliza logo */
+    align-items: center;
+    z-index: 1000;
+  }
+
+  /* Logo centralizada */
+  header .logo {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  header .logo img {
+    height: 35px;
+  }
+
+  /* Hamburguer no canto esquerdo */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1100;
+    position: absolute;
+    left: 20px;
+  }
+
+  /* Menu dropdown */
+  header nav .menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    left: 20px; /* abre a partir da esquerda */
+    background: rgba(20, 20, 20, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+
+  header nav .menu.active {
+    display: flex;
+  }
+
+  /* Links */
+  header nav .menu li a {
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: left;
+  }
+
+  /* Botão orçamento dentro do menu no mobile */
+  .btn-orcamento-header {
+    display: none;
+  }
+
+  .caixa {
+  margin: 0px 50px;
+  border-radius: 30px;
+  font-size: 20px;
+  transform: translateY(45vh);
+  text-align: center;
+  background: linear-gradient(90deg, #6a0dad, #1e90ff);
+  box-shadow: 0 0 25px #6a0dad, 0 0 50px #1e90ff;
+}
 }

@@ -21,11 +21,11 @@ document.getElementById("formOrcamento").addEventListener("submit", function(e) 
   const texto = `
 *NOVO ORÇAMENTO:*
 
- *Nome:* ${nome}
-  *Email:* ${email}
-  *Telefone:* ${telefone}
-  *Serviço:* ${servico}
-  *Mensagem:* ${mensagem}
+*Nome:* ${nome}
+*Email:* ${email}
+*Telefone:* ${telefone}
+*Serviço:* ${servico}
+*Mensagem:* ${mensagem}
   `;
 
   // Gera o link do WhatsApp

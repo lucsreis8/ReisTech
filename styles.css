@@ -415,6 +415,7 @@ ul {
 
 /* Tipos de Sites */
 #sites {
+  text-align: center;
   padding: 80px 40px;
   padding-top: 150px;
 }
@@ -485,8 +486,8 @@ ul {
 }
 
 .comprar-site {
-  background: #1e90ff;
-  color: black;
+  background: linear-gradient(90deg, #6a0dad, #1e90ff);
+  color: rgb(255, 255, 255);
 }
 
 .btn:hover {
