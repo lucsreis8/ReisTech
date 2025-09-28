@@ -52,7 +52,7 @@ body {
 
 /* Section principal */
 #orcamento {
-    padding: 40px 60px;
+    padding: 20px 0px;
 }
 
 .orcamento-container {
@@ -115,6 +115,10 @@ body {
   font-size: 1rem;
 }
 
+.orcamento-form select {
+  color: #838383;
+}
+
 .orcamento-form input:focus,
 .orcamento-form select:focus,
 .orcamento-form textarea:focus {
@@ -123,7 +127,7 @@ body {
 
 .orcamento-form button.btn {
   background: #6a0dad;
-  color: #fff;
+  color: #ffffff;
   padding: 14px;
   border-radius: 8px;
   border: none;
@@ -154,4 +158,17 @@ servico {
   .orcamento-info img {
     display: none;
   }
+
+  #orcamento {
+    padding: 20px 20px;
+}
+
+.btn-voltar {
+  display: none;
+}
+
+.orcamento-form select {
+  color: #000000;
+}
+
 }
