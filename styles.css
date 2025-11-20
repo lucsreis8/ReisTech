@@ -1,0 +1,1127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: rgb(22, 1, 43);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ======= MOBILE ======= */
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* centraliza logo */
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Logo centralizada */
+  header .logo {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  header .logo img {
+    height: 35px;
+  }
+
+  /* Hamburguer no canto esquerdo */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1100;
+    position: absolute;
+    left: 20px;
+  }
+
+  /* Menu dropdown */
+  header nav .menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    left: 20px; /* abre a partir da esquerda */
+    background: rgba(20, 20, 20, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+
+  header nav .menu.active {
+    display: flex;
+  }
+
+  /* Links */
+  header nav .menu li a {
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: left;
+  }
+
+  /* Botão orçamento dentro do menu no mobile */
+  .btn-orcamento-header {
+    display: none;
+  }
+}
+
+
+
+/* ======= DESKTOP ======= */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  header {
+    width: 100vw;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.96);
+    display: flex;
+    justify-content: space-between; /* espaço entre logo / menu / botão */
+    align-items: center;
+    padding: 10px 90px;
+    z-index: 9999;
+  }
+
+  header .logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 600px
+}
+
+
+  /* Menu centralizado */
+  header nav .menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    margin: 0; /* tira aquele deslocamento forçado */
+  }
+
+  /* Links animados */
+  header nav .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+
+  /* underline animado */
+  header nav .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #1e90ff;
+    transition: width 0.3s ease;
+  }
+
+  header nav .menu li a:hover::after {
+    width: 100%;
+  }
+
+  header nav .menu li a:hover {
+    color: #1e90ff;
+  }
+
+  /* Botão orçamento fixo à direita */
+  .orcamento {
+    margin-left: auto;
+  }
+
+  .btn-orcamento-header {
+    background: #6a0dad;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn-orcamento-header:hover {
+    background: #1e90ff;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  /* Esconde orçamento mobile */
+  .orcamento-mobile {
+    display: none;
+  }
+}
+
+/* Canvas de fundo animado */
+#bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Início */
+#inicio {
+  
+  padding: 105px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  background: linear-gradient(100deg, #6a0dad, #000000);
+  border-radius: 20px;
+
+  /* ======= Conteúdo ======= */
+  .conteudo {
+    max-width: 600px;
+    text-align: left;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #e7e7e7;
+      margin-bottom: 25px;
+    }
+
+    .btn-hero {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #ffffff;
+      color: #6a0dad;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: .3s ease;
+    }
+
+    .btn-hero:hover {
+      background: #1e90ff;
+      color: #ffffff;
+      box-shadow: 0 0 10px #ffffff;
+    }
+  }
+
+  /* ======= Imagem ======= */
+  .imagem-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .hero-img {
+      width: 70%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+      transition: .4s ease;
+    }
+
+    .hero-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ffffff;
+    }
+  }
+}
+
+/* ======= Responsivo ======= */
+@media (max-width: 900px) {
+  #inicio {
+    flex-direction: column;
+
+    .imagem-area {
+      order: -1;
+    }
+
+    .conteudo {
+      text-align: center;
+    }
+  }
+}
+
+
+/* Section Serviços */
+
+#servicos {
+  padding: 100px 20px;
+  text-align: center;
+
+  h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 700;
+  }
+
+
+  /* ======= Layout ======= */
+
+  .lista-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+
+  
+/* ======= Card ======= */
+
+  .servico-card {
+    background: rgba(11, 0, 20, 0.719);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #000000;
+    transition: .5s ease;
+    position: relative;
+
+    h3 {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #d3d3d3;
+      margin-bottom: 15px;
+    }
+
+
+    /* ======= Botão ======= */
+
+    .saiba-mais {
+      padding: 10px 20px;
+      background: #6a0dad;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: .3s ease;
+    }
+  
+    
+    /* ======= Detalhes ======= */
+
+    .servico-detalhes {
+      margin-top: 15px;
+      background: rgba(11, 0, 20, 0.822);
+      box-shadow: 0 4px 12px #000000;
+      padding: 0 15px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all .4s ease;
+      border-radius: 10px;
+
+      ul {
+        padding-left: 18px;
+        text-align: left;
+      }
+
+      li {
+        margin-bottom: 8px;
+        color: #ffffff;
+      }
+
+      .btn-orcamento {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #6a0dad, #1e90ff);
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: .2s ease;
+      }
+
+        .btn-orcamento:hover {
+        background: none;
+        box-shadow: 0 0 5px #1e90ff;
+        color: #1e90ff
+      }
+    }
+  }   
+
+    .servico-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px #6a0dad, 0 0 10px #1e90ff;
+    }
+
+  /* ======= Abrir Detalhes ======= */
+
+  .servico-card.ativo .servico-detalhes {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px;
+  }
+
+
+  /* ======= Card-1 ======= */
+
+  .servico-card1 {
+    background: rgba(11, 0, 20, 0.719);
+    padding: 25px;
+    border-radius: 15px;
+    transition: .5s ease;
+    position: relative;
+
+    h3 {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #d3d3d3;
+      margin-bottom: 15px;
+    }
+
+
+    /* ======= Botão ======= */
+
+    .saiba-mais {
+      padding: 10px 20px;
+      background: #6a0dad;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: .3s ease;
+    }
+  
+    
+    /* ======= Detalhes ======= */
+
+    .servico-detalhes {
+      margin-top: 15px;
+      background: rgba(11, 0, 20, 0.822);
+      box-shadow: 0 4px 12px #000000;
+      padding: 0 15px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all .4s ease;
+      border-radius: 10px;
+
+      ul {
+        padding-left: 18px;
+        text-align: left;
+      }
+
+      li {
+        margin-bottom: 8px;
+        color: #ffffff;
+      }
+
+      .btn-orcamento {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #6a0dad, #1e90ff);
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: .2s ease;
+      }
+
+        .btn-orcamento:hover {
+        background: none;
+        box-shadow: 0 0 5px #1e90ff;
+        color: #1e90ff
+      }
+    }
+  }   
+
+    .servico-card1:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px #6a0dad, 0 0 10px #1e90ff;
+    }
+
+
+  /* ======= Abrir Detalhes ======= */
+
+  .servico-card1.ativo .servico-detalhes {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px;
+  }
+
+
+  /* ======= Card-2 ======= */
+
+  .servico-card2 {
+    background: rgba(11, 0, 20, 0.719);
+    padding: 25px;
+    border-radius: 15px;
+    transition: .5s ease;
+    position: relative;
+
+    h3 {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #d3d3d3;
+      margin-bottom: 15px;
+    }
+
+
+    /* ======= Botão ======= */
+
+    .saiba-mais {
+      padding: 10px 20px;
+      background: #6a0dad;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: .3s ease;
+    }
+  
+    
+    /* ======= Detalhes ======= */
+
+    .servico-detalhes {
+      margin-top: 15px;
+      background: rgba(11, 0, 20, 0.822);
+      box-shadow: 0 4px 12px #000000;
+      padding: 0 15px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all .4s ease;
+      border-radius: 10px;
+
+      ul {
+        padding-left: 18px;
+        text-align: left;
+      }
+
+      li {
+        margin-bottom: 8px;
+        color: #ffffff;
+      }
+
+      .btn-orcamento {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #6a0dad, #1e90ff);
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: .2s ease;
+      }
+
+        .btn-orcamento:hover {
+        background: none;
+        box-shadow: 0 0 5px #1e90ff;
+        color: #1e90ff
+      }
+    }
+  }   
+
+    .servico-card2:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px #6a0dad, 0 0 10px #1e90ff;
+    }
+
+
+  /* ======= Abrir Detalhes ======= */
+
+  .servico-card2.ativo .servico-detalhes {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px;
+  }
+
+
+  /* ======= Card-3 ======= */
+
+  .servico-card3 {
+    background: rgba(11, 0, 20, 0.719);
+    padding: 25px;
+    border-radius: 15px;
+    transition: .5s ease;
+    position: relative;
+
+    h3 {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #d3d3d3;
+      margin-bottom: 15px;
+    }
+
+
+    /* ======= Botão ======= */
+
+    .saiba-mais {
+      padding: 10px 20px;
+      background: #6a0dad;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: .3s ease;
+    }
+  
+    
+    /* ======= Detalhes ======= */
+
+    .servico-detalhes {
+      margin-top: 15px;
+      background: rgba(11, 0, 20, 0.822);
+      box-shadow: 0 4px 12px #000000;
+      padding: 0 15px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all .4s ease;
+      border-radius: 10px;
+
+      ul {
+        padding-left: 18px;
+        text-align: left;
+      }
+
+      li {
+        margin-bottom: 8px;
+        color: #ffffff;
+      }
+
+      .btn-orcamento {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #6a0dad, #1e90ff);
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: .2s ease;
+      }
+
+        .btn-orcamento:hover {
+        background: none;
+        box-shadow: 0 0 5px #1e90ff;
+        color: #1e90ff
+      }
+    }
+  }   
+
+  .servico-card3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #6a0dad, 0 0 10px #1e90ff;
+  }
+
+  /* ======= Abrir Detalhes ======= */
+
+  .servico-card3.ativo .servico-detalhes {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px;
+  }
+}   
+
+
+/* Section Feedbacks */
+
+@media (min-width: 768px) {
+#feedbacks {
+  padding: 60px 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  /* ======= Layout ======= */
+  .lista-feedbacks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ======= Card ======= */
+  .feedback-card {
+    background: rgba(11, 0, 20, 0.719);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #000000;
+    transition: .4s ease;
+    position: relative;
+
+    .mensagem {
+      font-size: 1.05rem;
+      color: #d3d3d3;
+      margin-bottom: 15px;
+      line-height: 1.5rem;
+    }
+
+   .autor {
+    margin: 0px 90px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    .insta-img {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      object-fit: cover;
+      transition: .3s ease;
+      cursor: pointer;
+    }
+
+    .insta-img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 5px #1e90ff;
+    }
+  }
+
+   .autor:hover {
+      transform: scale(1.15);
+    }
+
+  
+    .autor2 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .autor3 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  .feedback-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #6a0dad, 0 0 10px #1e90ff;
+  }
+}
+}
+
+@media (max-width: 768px) {
+  #feedbacks {
+  padding: 60px 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  /* ======= Layout ======= */
+  .lista-feedbacks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ======= Card ======= */
+  .feedback-card {
+    background: rgba(11, 0, 20, 0.719);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #000000;
+    transition: .4s ease;
+    position: relative;
+
+    .mensagem {
+      font-size: 1.05rem;
+      color: #d3d3d3;
+      margin-bottom: 15px;
+      line-height: 1.5rem;
+    }
+
+   .autor {
+    margin: 0px 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    .insta-img {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      object-fit: cover;
+      transition: .3s ease;
+      cursor: pointer;
+    }
+
+    .insta-img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 5px #1e90ff;
+    }
+  }
+
+   .autor:hover {
+      transform: scale(1.15);
+    }
+
+  
+    .autor2 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .autor3 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  .feedback-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #6a0dad, 0 0 10px #1e90ff;
+  }
+}
+}
+
+
+/* Sobre */
+#sobre {
+  padding-top: 130px;
+  padding-bottom: 100px;
+  color: #fff;
+}
+
+.sobre-container {
+  display: flex;
+  flex-wrap: wrap; /* responsivo para telas menores */
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.sobre-foto img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #6a0dad, 0 0 60px #1e90ff;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.sobre-foto img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 40px #6a0dad, 0 0 80px #1e90ff;
+}
+
+@media (max-width: 768px) {
+#sobre {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  color: #fff;
+}
+
+  .sobre-foto img {
+  display: none;
+} 
+
+.sobre-texto {
+  font-size: 17px;
+  padding: 30px;
+  margin: 0px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  
+
+  h2 {
+    text-align: center;
+    font-size: 35px;
+  margin-bottom: 20px;
+  
+  }
+  h2::after {
+  text-align: center;
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #6a0dad;
+  display: block;
+  margin-top: 10px;
+  border-radius: 2px;
+  }
+
+  p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.btn {
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 15px;
+  background: #6a0dad;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #1e90ff;
+  color: black;
+  transform: scale(1.05);
+}
+  }
+}
+
+@media (min-width: 768px) {
+.sobre-texto {
+  margin-right: 20px;
+  font-size: 17px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.sobre-texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sobre-texto h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #6a0dad;
+  display: block;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.sobre-texto p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.sobre-texto .btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #6a0dad;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.sobre-texto .btn:hover {
+  background: #1e90ff;
+  color: black;
+  transform: scale(1.05);
+}
+}
+
+/* Contato */
+#contato {
+  padding: 80px 40px;
+  background: rgba(10, 0, 20, 0.699); /* roxo escuro quase preto */
+  color: #fff;
+}
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  align-items: center;
+}
+
+/* Lado esquerdo */
+.contato-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.logo-contato {
+  width: 160px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 25px #6a0dad, 0 0 50px #1e90ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.logo-contato:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 40px #6a0dad, 0 0 80px #1e90ff;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.redes-sociais a img {
+  width: 42px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociais a img:hover {
+  transform: scale(1.2);
+}
+
+/* Lado direito */
+.contato-form {
+  flex: 2;
+  min-width: 280px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+  }
+  h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #6a0dad, #1e90ff);
+    display: block;
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  input,
+  textarea {
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+
+  input:focus,
+  textarea:focus {
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  button.btn {
+    background: linear-gradient(90deg, #6a0dad, #1e90ff);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  button.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contato-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contato-info {
+    margin-bottom: 30px;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}

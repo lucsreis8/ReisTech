@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:rgb(22, 1, 43);
+  color: #fff;
+}
+
+.orcamento-header {
+  width: 100vw;
+  background: rgba(15, 0, 30, 0.95);
+  padding: 5px 0px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.orcamento-header .logo img {
+  margin-left: 40px;
+  height: 45px;
+  transition: transform 0.3s;
+}
+
+.orcamento-header .logo img:hover {
+  transform: scale(1.1);
+}
+
+.btn-voltar {
+  margin-right: 40px;
+  background: #6a0dad;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-voltar:hover {
+  background: #1e90ff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+
+/* Canvas de fundo animado */
+#bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Section principal */
+#orcamento {
+    padding-top: 50px;
+
+}
+
+.orcamento-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+}
+
+/* Lado esquerdo */
+.orcamento-info {
+  flex: 1;
+  
+}
+
+.orcamento-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.orcamento-info p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.orcamento-info img {
+  margin-left: 80px;
+  margin-top: 30px;
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #6a0dad, 0 0 40px #1e90ff;
+}
+
+/* Formulário */
+.orcamento-form {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.orcamento-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.orcamento-form input,
+.orcamento-form select,
+.orcamento-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.orcamento-form select {
+  color: #838383;
+}
+
+.orcamento-form input:focus,
+.orcamento-form select:focus,
+.orcamento-form textarea:focus {
+  background: rgba(255,255,255,0.2);
+}
+
+.orcamento-form button.btn {
+  background: #6a0dad;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.orcamento-form button.btn:hover {
+  background: #1e90ff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.msg-sucesso {
+  display: none;
+  margin-top: 15px;
+  color: #0f0;
+  font-weight: bold;
+  text-align: center;
+}
+
+servico {
+    color:#000
+}
+
+@media (max-width: 768px) {
+.orcamento-info p {text-align: center;}
+
+.orcamento-info h1 {
+  text-align: center;
+}
+
+  .orcamento-info img {
+    display: none;
+  }
+
+  #orcamento {
+    padding: 20px 0px;
+}
+
+.btn-voltar {
+  display: none;
+}
+
+.orcamento-form select {
+  color: #838383;
+}
+
+}

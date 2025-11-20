@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Orçamento - ReisTech</title>
+  <link rel="stylesheet" href="orcamento.css">
+  <link rel="icon" href="img/R sozinho.png" type="image/png">
+</head>
+<body>
+  
+    <header class="orcamento-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/ReisTech8.png" alt="Logo ReisTech">
+            </a>
+             <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+        </div>
+    </header>
+
+    <canvas id="bg-animation"></canvas>
+
+  <section id="orcamento">
+    <div class="orcamento-container">
+
+      <!-- Coluna esquerda (imagem ilustrativa) -->
+      <div class="orcamento-info">
+        <h1>Solicite seu Orçamento</h1>
+        <p>Preencha os dados e receba um orçamento personalizado de acordo com sua necessidade.</p>
+        <img src="/img/R (ReisTech).jpeg" alt="Orçamento ilustrativo">
+      </div>
+
+      <!-- Coluna direita (formulário) -->
+      <div class="orcamento-form">
+        <form id="formOrcamento">
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu email" required>
+          <input type="tel" name="telefone" placeholder="Seu telefone (opcional)">
+          
+          <select name="servico" required>
+            <option value="">Selecione o serviço</option>
+            <option value="Computador ou Notebook">Manutenção de PCs e Notebooks</option>
+            <option value="Celular ou Console ">Conserto de Celulares e Consoles</option>
+            <option value="Upgrade">Upgrades de Hardware</option>
+            <option value="Limpeza">Limpeza de Sistema e Softwares</option>
+            <option value="Site">Criação de Sites</option>
+            <option value="Outro">Outro serviço</option>
+          </select>
+
+          <textarea name="mensagem" placeholder="Descreva o que você precisa..." rows="5" required></textarea>
+          <button type="submit" class="btn">Enviar Orçamento</button>
+        </form>
+        <p class="msg-sucesso" id="msgSucesso">✅ Orçamento enviado com sucesso!</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="orcamento.js"></script>
+</body>
+</html>
