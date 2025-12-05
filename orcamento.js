@@ -15,7 +15,7 @@ document.getElementById("formOrcamento").addEventListener("submit", function(e) 
   localStorage.setItem("orcamento_servico", servico);
 
   // Número do WhatsApp (troque pelo seu)
-  const numero = "5561994503282"; // Ex: 5511912345678
+  const numero = "5561995171058"; // Ex: 5511912345678
 
   // Monta a mensagem formatada
   const texto = `
