@@ -97,7 +97,7 @@ document.querySelector("#contato form").addEventListener("submit", function (e) 
   const email = this.querySelector("input[name='email']").value;
   const mensagem = this.querySelector("textarea[name='mensagem']").value;
 
-  const numero = "5561994503282";
+  const numero = "5561995171058";
 
   const texto = `Olá, meu nome é ${nome}.
   Email: ${email}
