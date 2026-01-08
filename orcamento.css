@@ -120,6 +120,7 @@ body {
 .orcamento-form input,
 .orcamento-form select,
 .orcamento-form textarea {
+  resize: none;
   padding: 12px;
   border-radius: 8px;
   border: none;

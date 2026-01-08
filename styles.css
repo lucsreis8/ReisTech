@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -96,7 +100,7 @@ ul {
   header {
     width: 100vw;
     position: fixed;
-    background: rgba(0, 0, 0, 0.96);
+    background: rgba(0, 0, 0, 0.507);
     display: flex;
     justify-content: space-between; /* espaço entre logo / menu / botão */
     align-items: center;
@@ -141,7 +145,7 @@ ul {
     left: 0;
     width: 0%;
     height: 2px;
-    background: #1e90ff;
+    background: #6a0dad;
     transition: width 0.3s ease;
   }
 
@@ -150,7 +154,7 @@ ul {
   }
 
   header nav .menu li a:hover {
-    color: #1e90ff;
+    color: #6a0dad;
   }
 
   /* Botão orçamento fixo à direita */
@@ -169,9 +173,9 @@ ul {
   }
 
   .btn-orcamento-header:hover {
-    background: #1e90ff;
-    color: #000;
-    transform: scale(1.05);
+    background: none;
+    border: 2px solid #6a0dad;
+    color: #6a0dad;
   }
 
   /* Esconde orçamento mobile */
@@ -1074,6 +1078,7 @@ ul {
 
     input,
     textarea {
+      resize: none;
       padding: 14px;
       border-radius: 8px;
       border: none;
