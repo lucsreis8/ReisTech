@@ -173,9 +173,9 @@ ul {
   }
 
   .btn-orcamento-header:hover {
-    background: none;
-    border: 2px solid #6a0dad;
-    color: #6a0dad;
+    background: linear-gradient(90deg, #6a0dad, #1e90ff);;
+    box-shadow: 0 0 10px #6a0dad, 0 0 10px #1e90ff;
+    color: #ffffff;
   }
 
   /* Esconde orçamento mobile */
@@ -239,14 +239,18 @@ ul {
     }
 
     .btn-hero:hover {
-      background: #1e90ff;
+      background: rgba(102, 170, 0, 0);
       color: #ffffff;
       box-shadow: 0 0 10px #ffffff;
+      border: 1px solid white;
     }
   }
 
   /* ======= Imagem ======= */
-  .imagem-area {
+  
+.wow {display:contents;}
+
+    .imagem-area {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -255,7 +259,7 @@ ul {
       width: 70%;
       max-width: 500px;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+      box-shadow: 0 0 20px #000000;
       transition: .4s ease;
     }
 
@@ -265,6 +269,7 @@ ul {
     }
   }
 }
+
 
 /* ======= Responsivo ======= */
 @media (max-width: 900px) {

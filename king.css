@@ -1,0 +1,97 @@
+#king {
+  padding: 140px 30px 100px;
+}
+
+.king-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* ===== Imagem ===== */
+.king-imagem {
+  flex: 1;
+  text-align: center;
+}
+
+.king-imagem img {
+  width: 320px;
+  max-width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #6a0dad, 0 0 60px #1e90ff;
+  transition: transform 0.4s ease;
+}
+
+.king-imagem img:hover {
+  transform: scale(1.08);
+}
+
+/* ===== Texto ===== */
+.king-texto {
+  flex: 2;
+  min-width: 280px;
+}
+
+.king-texto h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.king-texto h1 span {
+  color: #6a0dad;
+}
+
+.king-texto p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* ===== Cards ===== */
+.king-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.king-card {
+  background: rgba(11, 0, 20, 0.75);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #000;
+  transition: 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.king-card h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.king-card p {
+  color: #d3d3d3;
+  font-size: 0.95rem;
+}
+
+.king-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #6a0dad, 0 0 10px #1e90ff;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .king-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .king-texto h1 {
+    font-size: 2.2rem;
+  }
+}

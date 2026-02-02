@@ -152,8 +152,8 @@ body {
 }
 
 .orcamento-form button.btn:hover {
-  background: #1e90ff;
-  color: #000;
+  background: linear-gradient(90deg, #6a0dad, #1e90ff);
+  color: #ffffff;
   transform: scale(1.05);
 }
 
@@ -190,6 +190,10 @@ servico {
 
 .orcamento-form select {
   color: #838383;
+}
+
+.orcamento-form {
+  margin: 0 10px;
 }
 
 }
