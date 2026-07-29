@@ -1,93 +1,362 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>Conheça o KING</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" href="img/R sozinho.png" type="image/png" />
-  <!-- CSS global do site -->
-  <link rel="stylesheet" href="styles.css">
 
-  <!-- CSS específico do KING -->
-  <link rel="stylesheet" href="king.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conheça o KING | ReisTech</title>
+
+    <link rel="icon" href="img/R sozinho.png" type="image/png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="king.css">
 </head>
+
 <body>
 
-    <canvas id="bg-animation"></canvas>
+<canvas id="bg-animation"></canvas>
 
-    <header>
-  <!-- Menu mobile -->
-  <div class="menu-toggle" id="menu-toggle">☰</div>
+<header>
 
-  <!-- Logo -->
-  <div class="logo">
-    <a href="index.html">
-      <img src="img/ReisTech8.png" alt="ReisTech">
-    </a>
-  </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-  <!-- Navegação -->
-  <nav>
-    <ul class="menu" id="menu">
-      <li><a href="index.html#inicio">Início</a></li>
-      <li><a href="index.html#servicos">Serviços</a></li>
-      <li><a href="index.html#sobre">Sobre Mim</a></li>
-      <li><a href="index.html#contato">Contato</a></li>
-    </ul>
-  </nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/ReisTech8.png" alt="ReisTech">
+        </a>
+    </div>
 
-  <!-- Botão orçamento desktop -->
-  <div class="orcamento">
-    <a href="orcamento.html" class="btn-orcamento-header">
-      Orçamento
-    </a>
-  </div>
+    <nav>
+        <ul class="menu" id="menu">
+            <li><a href="index.html#inicio">Início</a></li>
+            <li><a href="index.html#servicos">Serviços</a></li>
+            <li><a href="index.html#sobre">Sobre Mim</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="orcamento">
+        <a href="orcamento.html" class="btn-orcamento-header">
+            Orçamento
+        </a>
+    </div>
+
 </header>
 
-<section id="king">
-  <div class="king-container">
+<main>
 
-    <!-- Imagem -->
-    <div class="king-imagem">
-      <img src="img/KING.png" alt="Mascote KING">
+<section id="king-hero">
+
+    <div class="hero-glow glow-left"></div>
+    <div class="hero-glow glow-right"></div>
+
+    <div class="king-container">
+
+        <div class="king-content reveal">
+
+            <span class="king-tag">
+                MASCOTE OFICIAL DA REISTECH
+            </span>
+
+            <h1>
+                Conheça o
+                <span>KING</span>
+            </h1>
+
+            <p>
+
+                O KING representa a essência da ReisTech: tecnologia,
+                confiança e excelência. Mais do que um mascote,
+                ele simboliza o compromisso de entregar soluções
+                inteligentes para cada cliente.
+
+            </p>
+
+            <div class="king-buttons">
+
+                <a href="orcamento.html" class="btn-king">
+                    Solicitar Orçamento
+                </a>
+
+                <a href="#atributos" class="btn-outline">
+                    Conhecer o KING
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="king-image reveal">
+
+            <div class="king-circle"></div>
+
+            <img
+                src="img/KING.png"
+                alt="KING">
+
+        </div>
+
     </div>
 
-    <!-- Conteúdo -->
-    <div class="king-texto">
-      <h1>Este é o <span>KING</span></h1>
-
-      <p>
-        O KING não é apenas um mascote.  
-        Ele representa força, confiança e excelência em tecnologia.
-      </p>
-
-      <p>
-        Criado para ser a identidade da ReisTech, o KING simboliza
-        compromisso com qualidade, inovação e respeito ao cliente.
-      </p>
-
-      <div class="king-cards">
-        <div class="king-card">
-          <h3>🛡️ Personalidade</h3>
-          <p>Forte, confiável e sempre pronto para resolver qualquer desafio.</p>
-        </div>
-
-        <div class="king-card">
-          <h3>⚡ Missão</h3>
-          <p>Garantir tecnologia funcionando no máximo desempenho.</p>
-        </div>
-
-        <div class="king-card">
-          <h3>👑 Representa</h3>
-          <p>A autoridade e a qualidade da ReisTech no mercado.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </section>
 
-<script src="king.js"></script>
-</body>
-</html>
+<section id="atributos">
 
+    <div class="section-title reveal">
+
+        <span class="king-tag">
+            ATRIBUTOS
+        </span>
+
+        <h2>
+            O que faz o KING único?
+        </h2>
+
+    </div>
+
+    <div class="cards-grid">
+
+        <div class="king-card reveal">
+
+            <div class="card-icon">
+                🛡️
+            </div>
+
+            <h3>Confiança</h3>
+
+            <p>
+
+                Representa segurança,
+                responsabilidade e compromisso
+                em cada atendimento.
+
+            </p>
+
+        </div>
+
+        <div class="king-card reveal">
+
+            <div class="card-icon">
+                ⚡
+            </div>
+
+            <h3>Performance</h3>
+
+            <p>
+
+                Agilidade para entregar
+                soluções modernas,
+                rápidas e eficientes.
+
+            </p>
+
+        </div>
+
+        <div class="king-card reveal">
+
+            <div class="card-icon">
+                👑
+            </div>
+
+            <h3>Liderança</h3>
+
+            <p>
+
+                Um símbolo criado para
+                representar autoridade
+                em tecnologia.
+
+            </p>
+
+        </div>
+
+        <div class="king-card reveal">
+
+            <div class="card-icon">
+                💎
+            </div>
+
+            <h3>Qualidade</h3>
+
+            <p>
+
+                Cada detalhe da ReisTech
+                busca excelência em
+                atendimento e execução.
+
+            </p>
+
+        </div>
+
+        <div class="king-card reveal">
+
+            <div class="card-icon">
+                🚀
+            </div>
+
+            <h3>Inovação</h3>
+
+            <p>
+
+                Evolução constante,
+                novas tecnologias
+                e soluções inteligentes.
+
+            </p>
+
+        </div>
+
+        <div class="king-card reveal">
+
+            <div class="card-icon">
+                🔧
+            </div>
+
+            <h3>Tecnologia</h3>
+
+            <p>
+
+                Hardware, software,
+                manutenção e desenvolvimento
+                em um só lugar.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="estatisticas">
+
+    <div class="section-title reveal">
+
+        <span class="king-tag">
+
+            RESULTADOS
+
+        </span>
+
+        <h2>
+
+            O espírito da ReisTech
+
+        </h2>
+
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat reveal">
+
+            <h3 class="counter" data-target="100">
+                0
+            </h3>
+
+            <span>% Dedicação</span>
+
+        </div>
+
+        <div class="stat reveal">
+
+            <h3 class="counter" data-target="24">
+                0
+            </h3>
+
+            <span>Horas de Compromisso</span>
+
+        </div>
+
+        <div class="stat reveal">
+
+            <h3 class="counter" data-target="300">
+                0
+            </h3>
+
+            <span>Equipamentos Atendidos</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="historia">
+
+    <div class="historia-container reveal">
+
+        <div class="section-title">
+
+            <span class="king-tag">
+
+                IDENTIDADE
+
+            </span>
+
+            <h2>
+
+                A origem do KING
+
+            </h2>
+
+        </div>
+
+        <p>
+
+            O KING nasceu para representar
+            muito mais do que uma identidade visual.
+
+            Sua imagem transmite confiança,
+            inteligência e evolução constante.
+
+            Cada detalhe foi pensado para
+            mostrar a forma como a ReisTech
+            trabalha: com qualidade,
+            profissionalismo e inovação.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section id="cta-king">
+
+    <div class="cta-box reveal">
+
+        <h2>
+
+            Faça parte da experiência ReisTech
+
+        </h2>
+
+        <p>
+
+            Conte com soluções profissionais
+            em manutenção, upgrades,
+            desenvolvimento de sites
+            e suporte especializado.
+
+        </p>
+
+        <a
+            href="orcamento.html"
+            class="btn-king">
+
+            Solicitar Orçamento
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="king.js"></script>
+
+</body>
+
+</html>

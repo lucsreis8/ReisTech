@@ -5,22 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ReisTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="img/R sozinho.png" type="image/png" />
-  <meta property="og:image" content="https://photos.app.goo.gl/Yso1R7TemzbBmyrJ8" />
+  <meta property="og:image" content="img/ReisTech8.png" />
 </head>
 
+
+
 <body>
-  <!-- Fundo animado -->
   <canvas id="bg-animation"></canvas>
 
-  <!-- Header -->
   <header>
     <div class="logo">
       <img src="img/ReisTech8.png" alt="Logo ReisTech" />
     </div>
 
-    <!-- Botão hamburguer -->
     <div class="menu-toggle" id="menu-toggle">☰</div>
 
     <nav>
@@ -38,9 +40,9 @@
   </header>
 
   <main>
-    <!-- Início -->
     <section id="inicio">
-      <div class="conteudo">
+      <div class="conteudo reveal">
+        <span class="eyebrow">Suporte técnico &amp; desenvolvimento</span>
         <h1>Sinta-se seguro com a ReisTech</h1>
         <p>
           A ReisTech ajuda você a resolver problemas, otimizar desempenho e manter seus dispositivos funcionando como
@@ -49,18 +51,19 @@
         <a href="orcamento.html" class="btn-hero">Solicitar Orçamento</a>
       </div>
 
-      <div class="imagem-area">
-        <a class="wow" href="king.html"><img src="img/KING.png" alt="Imagem destaque" class="hero-img"></a>
+      <div class="imagem-area reveal">
+        <a class="wow" href="king.html">
+          <img src="img/KING.png" alt="Imagem destaque" class="hero-img">
+        </a>
       </div>
     </section>
 
-
-    <!-- Serviços -->
     <section id="servicos">
+      <span class="eyebrow eyebrow-center">O que eu faço</span>
       <h2>Serviços</h2>
       <div class="lista-servicos">
-        <!-- Desenvolvimento de Sites / Web -->
-        <div class="servico-card">
+        <div class="servico-card reveal">
+          <span class="servico-tag">Web</span>
           <h3>Desenvolvimento de Sites / Web</h3>
           <p>Criação de sites, responsivos e focados em resultados.</p>
           <button class="saiba-mais">Saiba Mais</button>
@@ -76,9 +79,8 @@
           </div>
         </div>
 
-
-        <!-- Consertos de Consoles e Celulares -->
-        <div class="servico-card1">
+        <div class="servico-card1 reveal">
+          <span class="servico-tag">Hardware</span>
           <h3>Consertos de Consoles e Celulares</h3>
           <p>Reparo rápido e eficiente em eletrônicos do dia a dia.</p>
           <button class="saiba-mais">Saiba Mais</button>
@@ -94,8 +96,8 @@
           </div>
         </div>
 
-        <!-- Upgrades de Hardware -->
-        <div class="servico-card2">
+        <div class="servico-card2 reveal">
+          <span class="servico-tag">Upgrade</span>
           <h3>Upgrades de Hardwares</h3>
           <p>Deixe seu PC ou notebook mais rápido e moderno.</p>
           <button class="saiba-mais">Saiba Mais</button>
@@ -111,8 +113,8 @@
           </div>
         </div>
 
-        <!-- Limpeza de Sistemas e Softwares -->
-        <div class="servico-card3">
+        <div class="servico-card3 reveal">
+          <span class="servico-tag">Manutenção</span>
           <h3>Manutenção de PCs e Notebooks</h3>
           <p>Troca de peças, soldagem, limpeza e muito mais.</p>
           <button class="saiba-mais">Saiba Mais</button>
@@ -130,23 +132,22 @@
       </div>
     </section>
 
-    <!-- Feedbacks -->
     <section id="feedbacks">
+      <span class="eyebrow eyebrow-center">Quem já confiou</span>
       <h2>Feedbacks</h2>
 
       <div class="lista-feedbacks">
-
-        <div class="feedback-card">
+        <div class="feedback-card reveal">
           <p class="mensagem">Serviço impecável! Ele sempre resolve tudo com atenção, qualidade e honestidade. Quando
             viu que estava faltando um material, correu atrás e comprou rapidinho só pra conseguir arrumar meu celular
-            no mesmo dia. Dá pra ver o cuidado e a responsabilidade que ele tem no trabalho. Confo de olhos fechados!
+            no mesmo dia. Dá pra ver o cuidado e a responsabilidade que ele tem no trabalho. Confio de olhos fechados!
           </p>
           <a href="https://www.instagram.com/claral.sxl/" class="autor">— Clara Lopes
             <img src="img/Instagram.png" alt="Instagram" class="insta-img">
           </a>
         </div>
 
-        <div class="feedback-card">
+        <div class="feedback-card reveal">
           <p class="mensagem">Simplesmente o melhor técnico de informática! Nunca tinha visto alguém tão bom no que faz
             no quesito tecnologia. Já vi ele fazer diversas limpezas e soluções de problemas em computadores com
             exatidão. Qualquer queixa que tenha ele saberá resolver de forma genial. Impressionado é pouco!</p>
@@ -155,26 +156,24 @@
           </a>
         </div>
 
-        <div class="feedback-card">
-          <p class="mensagem">Estava impossivel usar o computador por conta do Trojan que entrou, não conseguia usar e o
-            teclado e mouse não fucionavam, depois que ele arrumou voltei a conseguit usar o computador e os
+        <div class="feedback-card reveal">
+          <p class="mensagem">Estava impossível usar o computador por conta do Trojan que entrou, não conseguia usar o
+            teclado e o mouse não funcionavam, depois que ele arrumou voltei a conseguir usar o computador e os
             periféricos. Serviço de alta qualidade e ótimo suporte.</p>
           <a href="https://www.instagram.com/gnovais_ofc/" class="autor">— Gabriel Novais
             <img src="img/Instagram.png" alt="Instagram" class="insta-img">
           </a>
         </div>
-
       </div>
     </section>
 
-
-    <!-- Sobre Mim -->
     <section id="sobre">
       <div class="sobre-container">
-        <div class="sobre-foto">
+        <div class="sobre-foto reveal">
           <img src="img/Lucas8.jpeg" alt="Foto do Lucas Reis" />
         </div>
-        <div class="sobre-texto">
+        <div class="sobre-texto reveal">
+          <span class="eyebrow">Sobre mim</span>
           <h2>Sobre Mim</h2>
           <p>
             Olá, meu nome é Lucas Reis. Sou estudante de Análise e
@@ -195,11 +194,9 @@
       </div>
     </section>
 
-    <!-- Contato -->
     <section id="contato">
       <div class="contato-container">
-        <!-- Lado esquerdo: logo + redes sociais -->
-        <div class="contato-info">
+        <div class="contato-info reveal">
           <img src="img/R (ReisTech).png" alt="Logo ReisTech" class="logo-contato" />
           <div class="redes-sociais">
             <a href="https://www.instagram.com/reis_.tech" target="_blank">
@@ -214,8 +211,7 @@
           </div>
         </div>
 
-        <!-- Lado direito: formulário -->
-        <div class="contato-form">
+        <div class="contato-form reveal">
           <h2>Fale Comigo</h2>
           <form>
             <input type="text" name="nome" placeholder="Seu nome" required />
