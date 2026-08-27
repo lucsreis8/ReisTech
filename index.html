@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReisTech Informática</title>
+<meta name="description" content="A ReisTech desenvolve sites, repara celulares, consoles e computadores, e realiza upgrades de hardware com precisão técnica e atendimento próximo. Solicite um orçamento.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ReisTech — Tecnologia, Desenvolvimento e Hardware">
+<meta property="og:description" content="Desenvolvimento web, manutenção, hardware e upgrades. Engenharia para todos os desafios tecnológicos.">
+<meta property="og:image" content="/assets/logo.png">
+<meta name="theme-color" content="#08070c">
+
+<link rel="icon" href="/assets/Rsozinho.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Pular para o conteúdo</a>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="ReisTech — página inicial">
+      <img src="assets/Rsozinho.png" alt="ReisTech" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-mark',innerHTML:'Reis<span>Tech</span>'}))">
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#feedbacks">Feedbacks</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="orcamento.html" class="btn btn-primary btn-sm"><span class="full">Orçamento</span><span class="short" aria-hidden="true">✦</span></a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ========================== MOBILE MENU ========================== -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-panel">
+    <a href="#inicio">Início <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a href="#servicos">Serviços <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a href="#sobre">Sobre <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a href="#feedbacks">Feedbacks <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a href="#contato">Contato <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <div class="mobile-menu-cta">
+      <a href="orcamento.html" class="btn btn-primary">Solicitar orçamento</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-copy">
+        <p class="eyebrow" data-reveal>Tecnologia · Desenvolvimento · Hardware</p>
+        <h1 data-reveal data-reveal-delay="80">Bem vindo á<br><em>ReisTech.</em></h1>
+        <p class="lede" data-reveal data-reveal-delay="160">
+          A ReisTech projeta sites, recupera hardware e potencializa equipamentos —
+          com o mesmo rigor técnico de ponta a ponta, do primeiro diagnóstico à entrega.
+        </p>
+        <div class="hero-actions" data-reveal data-reveal-delay="240">
+          <a href="orcamento.html" class="btn btn-primary">Solicitar orçamento</a>
+          <a href="#servicos" class="btn btn-ghost">Conhecer nossos serviços</a>
+        </div>
+        <div class="hero-stats" data-reveal data-reveal-delay="320">
+          <div class="stat"><b>PARA EMPRESAS</b><span>Sites e soluções web</span></div>
+          <div class="stat"><b>SEU EQUIPAMENTO</b><span>Manutenção e upgrades</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal data-reveal-delay="200">
+        <div class="hero-visual-ring" aria-hidden="true"></div>
+        <div class="hero-visual-glow" aria-hidden="true"></div>
+        <span class="hero-tech-line l1" aria-hidden="true"></span>
+        <span class="hero-tech-line l2" aria-hidden="true"></span>
+
+        <button class="hero-visual-frame" id="mascot-trigger" aria-label="Conhecer o Lion King, mascote da ReisTech">
+          <img src="assets/KING_SEM_FUNDO.png" alt="Lion King, mascote da ReisTech" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mascot-fallback',innerHTML:'/assets/mascote.png<br>coloque a arte do Lion King aqui'}))">
+        </button>
+
+        <a href="lion-king.html" class="mascot-cta">Conheça o Lion King →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SERVICES MARQUEE ======================= -->
+  <div class="services-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span><b>Web</b> Desenvolvimento</span>
+      <span><b>Hardware</b> Celulares &amp; Consoles</span>
+      <span><b>Upgrade</b> Performance</span>
+      <span><b>Manutenção</b> PCs &amp; Notebooks</span>
+      <span><b>Web</b> Desenvolvimento</span>
+      <span><b>Hardware</b> Celulares &amp; Consoles</span>
+      <span><b>Upgrade</b> Performance</span>
+      <span><b>Manutenção</b> PCs &amp; Notebooks</span>
+    </div>
+  </div>
+
+  <!-- ============================ SERVICES ============================ -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Serviços</p>
+        <h2>Engenharia para<br>todos os desafios.</h2>
+        <p>Do código à placa-mãe: cada frente da ReisTech resolve um tipo diferente de problema técnico, com o mesmo padrão de diagnóstico e cuidado.</p>
+      </div>
+
+      <div class="services-list" data-reveal>
+        <!-- 01 — WEB -->
+        <div class="service-panel is-open">
+          <button class="service-panel-head" aria-expanded="true" aria-controls="service-web">
+            <span class="service-num">01</span>
+            <span class="service-titles">
+              <span class="service-kicker">Web</span>
+              <h3>Desenvolvimento Web</h3>
+            </span>
+            <span class="service-preview">Sites rápidos, responsivos e pensados para gerar resultado.</span>
+            <span class="service-plus" aria-hidden="true"></span>
+          </button>
+          <div class="service-panel-body" id="service-web">
+            <div class="service-panel-body-inner">
+              <div class="service-panel-content">
+                <span></span>
+                <div>
+                  <p class="service-desc">Criamos experiências digitais rápidas, responsivas e pensadas para gerar resultados — do primeiro wireframe à publicação.</p>
+                  <ul class="service-features">
+                    <li>Sites institucionais</li>
+                    <li>Portfólios profissionais</li>
+                    <li>Landing pages</li>
+                    <li>Páginas para vendas e captação de leads</li>
+                    <li>Desenvolvimento responsivo</li>
+                    <li>SEO técnico</li>
+                    <li>Otimização de performance</li>
+                    <li>Manutenção e suporte</li>
+                  </ul>
+                </div>
+                <a href="orcamento.html?servico=web" class="btn btn-ghost btn-sm">Solicitar orçamento</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 — HARDWARE -->
+        <div class="service-panel">
+          <button class="service-panel-head" aria-expanded="false" aria-controls="service-hardware">
+            <span class="service-num">02</span>
+            <span class="service-titles">
+              <span class="service-kicker">Hardware</span>
+              <h3>Conserto de Celulares e Consoles</h3>
+            </span>
+            <span class="service-preview">Diagnóstico preciso e reparos com atenção aos detalhes.</span>
+            <span class="service-plus" aria-hidden="true"></span>
+          </button>
+          <div class="service-panel-body" id="service-hardware">
+            <div class="service-panel-body-inner">
+              <div class="service-panel-content">
+                <span></span>
+                <div>
+                  <p class="service-desc">Diagnóstico preciso e reparos realizados com atenção aos detalhes, da tela ao componente de solda.</p>
+                  <ul class="service-features">
+                    <li>Troca de telas</li>
+                    <li>Troca de baterias</li>
+                    <li>Problemas de carregamento</li>
+                    <li>Reparo de conectores</li>
+                    <li>Reparo de botões</li>
+                    <li>Atualização e restauração de sistemas</li>
+                    <li>Soldagem de componentes SMD</li>
+                    <li>Diagnóstico de placas</li>
+                  </ul>
+                </div>
+                <a href="orcamento.html?servico=celular" class="btn btn-ghost btn-sm">Solicitar orçamento</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 — UPGRADE -->
+        <div class="service-panel">
+          <button class="service-panel-head" aria-expanded="false" aria-controls="service-upgrade">
+            <span class="service-num">03</span>
+            <span class="service-titles">
+              <span class="service-kicker">Upgrade</span>
+              <h3>Upgrades de Hardware</h3>
+            </span>
+            <span class="service-preview">Mais desempenho, velocidade e vida útil para seu equipamento.</span>
+            <span class="service-plus" aria-hidden="true"></span>
+          </button>
+          <div class="service-panel-body" id="service-upgrade">
+            <div class="service-panel-body-inner">
+              <div class="service-panel-content">
+                <span></span>
+                <div>
+                  <p class="service-desc">Mais desempenho, velocidade e vida útil para o seu equipamento, com recomendações sob medida.</p>
+                  <ul class="service-features">
+                    <li>Instalação de SSD</li>
+                    <li>Instalação/troca de HD</li>
+                    <li>Expansão de memória RAM</li>
+                    <li>Upgrade de placa de vídeo</li>
+                    <li>Upgrade de fonte</li>
+                    <li>Melhorias de refrigeração</li>
+                    <li>Avaliação de compatibilidade</li>
+                    <li>Recomendação de componentes</li>
+                  </ul>
+                </div>
+                <a href="orcamento.html?servico=upgrade" class="btn btn-ghost btn-sm">Solicitar orçamento</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 — MANUTENÇÃO -->
+        <div class="service-panel">
+          <button class="service-panel-head" aria-expanded="false" aria-controls="service-manutencao">
+            <span class="service-num">04</span>
+            <span class="service-titles">
+              <span class="service-kicker">Manutenção</span>
+              <h3>Manutenção de PCs e Notebooks</h3>
+            </span>
+            <span class="service-preview">Diagnóstico, prevenção e reparo para manter tudo funcionando.</span>
+            <span class="service-plus" aria-hidden="true"></span>
+          </button>
+          <div class="service-panel-body" id="service-manutencao">
+            <div class="service-panel-body-inner">
+              <div class="service-panel-content">
+                <span></span>
+                <div>
+                  <p class="service-desc">Diagnóstico, manutenção preventiva e reparos para manter seu equipamento funcionando perfeitamente.</p>
+                  <ul class="service-features">
+                    <li>Formatação</li>
+                    <li>Reinstalação de sistemas</li>
+                    <li>Limpeza interna</li>
+                    <li>Troca de pasta térmica</li>
+                    <li>Upgrade de SSD/HD/RAM</li>
+                    <li>Troca de componentes</li>
+                    <li>Diagnóstico de placas</li>
+                    <li>Reparo de hardware</li>
+                  </ul>
+                </div>
+                <a href="orcamento.html?servico=pc" class="btn btn-ghost btn-sm">Solicitar orçamento</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== SOBRE ============================== -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="about">
+        <div class="about-copy" data-reveal>
+          <p class="eyebrow">Sobre a ReisTech</p>
+          <h2>Tecnologia com<br>propósito.</h2>
+          <p>A ReisTech nasceu para tratar tecnologia como algo próximo: entender o problema real por trás de cada tela quebrada, cada site lento, cada máquina travando — e resolver com precisão de engenharia.</p>
+          <p>Unimos desenvolvimento, hardware e manutenção sob um mesmo padrão de diagnóstico, para que o cliente não precise entender de tecnologia para confiar no resultado.</p>
+
+          <ul class="about-pillars">
+            <li><b>Diagnóstico</b>Cada serviço começa entendendo a causa, não só o sintoma.</li>
+            <li><b>Precisão</b>Componentes certos, procedimentos corretos, sem atalhos.</li>
+            <li><b>Transparência</b>Orçamento claro antes de qualquer execução.</li>
+            <li><b>Proximidade</b>Atendimento direto, sem intermediários.</li>
+          </ul>
+        </div>
+
+        <div class="founder-card" data-reveal data-reveal-delay="120">
+          <span class="founder-tag">Fundador</span>
+          <h3>João Reis</h3>
+          <span class="founder-role">Engenharia, desenvolvimento &amp; direção técnica</span>
+          <p class="founder-bio">
+            À frente de cada diagnóstico e cada linha de código da ReisTech, João une
+            formação técnica e visão de produto para transformar problemas de
+            hardware e software em soluções que realmente funcionam.
+          </p>
+          <a href="https://lucsreis8.github.io/Portif-lio/" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Conhecer meu portfólio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FEEDBACKS ============================ -->
+  <section class="section feedbacks" id="feedbacks">
+    <canvas id="feedbacks-bg" class="feedbacks-bg" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Feedbacks</p>
+        <h2>Quem conhece,<br>confia.</h2>
+        <p>Depoimentos reais de quem já passou um problema técnico para a ReisTech resolver.</p>
+      </div>
+
+      <div class="feedback-track" data-reveal tabindex="0" aria-label="Depoimentos de clientes, role para o lado para ver mais">
+        <article class="feedback-card">
+          <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+          <p class="feedback-quote">Serviço impecável! Ele sempre resolve tudo com atenção, qualidade e honestidade. Quando viu que estava faltando um material, correu atrás e comprou rapidinho só pra conseguir arrumar meu celular no mesmo dia. Dá pra ver o cuidado e a responsabilidade que ele tem no trabalho. Confio de olhos fechados!</p>
+          <div class="feedback-person">
+            <span class="feedback-avatar"></span>
+            <div>
+              <a href="https://www.instagram.com/claral.sxl/" target="_blank" rel="noopener">
+                <img src="assets/instagram.png" alt="" onerror="this.remove()">
+                Clara Lopes
+              </a>
+              <span>Cliente ReisTech</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="feedback-card">
+          <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+          <p class="feedback-quote">Simplesmente o melhor técnico de informática! Nunca tinha visto alguém tão bom no que faz no quesito tecnologia. Já vi ele fazer diversas limpezas e soluções de problemas em computadores com exatidão. Qualquer queixa que tenha ele saberá resolver de forma genial. Impressionado é pouco!</p>
+          <div class="feedback-person">
+            <span class="feedback-avatar"></span>
+            <div>
+              <a href="https://www.instagram.com/alissonhmb.phys/" target="_blank" rel="noopener">
+                <img src="assets/instagram.png" alt="" onerror="this.remove()">
+                Alisson Henrique
+              </a>
+              <span>Cliente ReisTech</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="feedback-card">
+          <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+          <p class="feedback-quote">Estava impossível usar o computador por conta do Trojan que entrou, não conseguia usar o teclado e o mouse não funcionavam, depois que ele arrumou voltei a conseguir usar o computador e os periféricos. Serviço de alta qualidade e ótimo suporte.</p>
+          <div class="feedback-person">
+            <span class="feedback-avatar"></span>
+            <div>
+              <a href="https://www.instagram.com/gnovais_ofc/" target="_blank" rel="noopener">
+                <img src="assets/instagram.png" alt="" onerror="this.remove()">
+                Gabriel Novais
+              </a>
+              <span>Cliente ReisTech</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ FAQ ================================ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Perguntas frequentes</p>
+        <h2>Antes de<br>perguntar.</h2>
+      </div>
+
+      <div class="faq-list" data-reveal>
+        <div class="faq-item is-open">
+          <button class="faq-q" aria-expanded="true" aria-controls="faq-1">Quais serviços a ReisTech oferece?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-1"><div class="faq-a-inner"><p>Desenvolvimento web, conserto de celulares e consoles, upgrades de hardware e manutenção de PCs e notebooks — tudo com o mesmo padrão de diagnóstico técnico.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-2">Como funciona o orçamento?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-2"><div class="faq-a-inner"><p>Você preenche o formulário na página de orçamento contando o que precisa. A ReisTech analisa e retorna com uma proposta clara antes de qualquer execução.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-3">Vocês atendem presencialmente?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-3"><div class="faq-a-inner"><p>Sim. O atendimento presencial é combinado diretamente após o primeiro contato, conforme o tipo de serviço.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-4">Quanto tempo demora um reparo?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-4"><div class="faq-a-inner"><p>Varia conforme o diagnóstico e a disponibilidade de peças. Prazos são sempre informados antes da execução do serviço.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-5">Vocês trabalham com manutenção preventiva?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-5"><div class="faq-a-inner"><p>Sim, limpeza interna, troca de pasta térmica e diagnóstico periódico ajudam a evitar problemas maiores no equipamento.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-6">Posso solicitar orçamento para desenvolvimento de site?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-6"><div class="faq-a-inner"><p>Sim, basta selecionar "Desenvolvimento Web" no formulário de orçamento e descrever o projeto.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-7">Vocês fazem upgrades em notebooks?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-7"><div class="faq-a-inner"><p>Sim, incluindo SSD, memória RAM e melhorias de refrigeração, respeitando a compatibilidade de cada modelo.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-8">Como acompanhar meu orçamento?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-8"><div class="faq-a-inner"><p>O acompanhamento é feito pelo canal de contato informado no formulário — WhatsApp ou e-mail, conforme sua preferência.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FINAL CTA ============================ -->
+  <section class="section final-cta" id="contato">
+    <div class="final-cta-lines" aria-hidden="true"></div>
+    <div class="container" data-reveal>
+      <p class="eyebrow" style="justify-content:center">Fale com a ReisTech</p>
+      <h2>Se você tem um problema,<br>nós temos um caminho.</h2>
+      <p>Conte o que você precisa. A ReisTech encontra a solução.</p>
+      <a href="orcamento.html" class="btn btn-primary">Solicitar orçamento</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="ReisTech — página inicial">
+          <img src="assets/ReisTech8.png" alt="ReisTech" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-mark',innerHTML:'Reis<span>Tech</span>'}))">
+        </a>
+        <p>Desenvolvimento web, hardware, manutenção e upgrades — engenharia para todos os desafios tecnológicos.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#feedbacks">Feedbacks</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solicitações</h4>
+        <ul>
+          <li><a href="orcamento.html">Orçamento</a></li>
+          <li><a href="lion-king.html">Lion King</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5561995171058" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/reistechofc" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:reistech8@gmail.com">E-mail</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year></span> ReisTech. Todos os direitos reservados.</span>
+      <span class="footer-signature">Technology engineered with purpose.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/header.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/testimonials.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // mascot click -> Lion King page
+  document.getElementById('mascot-trigger')?.addEventListener('click', () => {
+    window.location.href = 'lion-king.html';
+  });
+</script>
+</body>
+</html>
