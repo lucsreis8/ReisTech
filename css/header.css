@@ -1,0 +1,160 @@
+/* ==========================================================================
+   REISTECH — HEADER
+   ========================================================================== */
+
+.site-header{
+  position: fixed;
+  top: 18px;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  transition: transform .5s var(--ease), top .4s var(--ease);
+}
+
+.site-header.is-hidden{
+  transform: translateY(-140%);
+}
+
+.header-inner{
+  width: min(1160px, calc(100% - 40px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 14px 12px 22px;
+  border-radius: 999px;
+  background: rgba(14, 12, 20, .62);
+  border: 1px solid var(--c-border);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: 0 12px 40px -18px rgba(0,0,0,.7);
+  transition: padding .4s var(--ease), background .4s var(--ease), box-shadow .4s var(--ease);
+}
+
+.site-header.is-scrolled .header-inner{
+  padding-block: 8px;
+  background: rgba(10, 9, 15, .78);
+  box-shadow: 0 14px 40px -16px rgba(0,0,0,.85), 0 0 0 1px rgba(124,77,255,.06);
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.brand img{
+  height: 30px;
+  width: auto;
+}
+.brand-mark{
+  /* fallback wordmark if logo.png is not yet supplied */
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -.01em;
+}
+.brand-mark span{ color: var(--c-purple); }
+
+.main-nav{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.main-nav a{
+  position: relative;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--c-text-muted);
+  transition: color .3s var(--ease), background .3s var(--ease);
+}
+.main-nav a:hover{
+  color: var(--c-text);
+  background: rgba(255,255,255,.05);
+}
+.main-nav a.is-active{
+  color: var(--c-text);
+  background: rgba(124,77,255,.14);
+}
+
+.header-cta{ display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+.menu-toggle{
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--c-border-strong);
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-text);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px){
+  .main-nav{ display: none; }
+  .menu-toggle{ display: inline-flex; }
+  .header-cta .btn-primary span.full{ display: none; }
+}
+
+/* --- mobile menu panel --- */
+.mobile-menu{
+  position: fixed;
+  inset: 0;
+  z-index: 190;
+  background: rgba(6,5,9,.72);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s var(--ease);
+}
+.mobile-menu.is-open{ opacity: 1; pointer-events: auto; }
+
+.mobile-menu-panel{
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  right: 20px;
+  background: var(--c-bg-elev);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-l);
+  padding: 22px;
+  transform: translateY(-16px) scale(.98);
+  opacity: 0;
+  transition: transform .45s var(--ease), opacity .45s var(--ease);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.8);
+}
+.mobile-menu.is-open .mobile-menu-panel{
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.mobile-menu-panel a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 6px;
+  font-family: var(--f-display);
+  font-size: 20px;
+  border-bottom: 1px solid var(--c-border);
+  color: var(--c-text);
+}
+.mobile-menu-panel a:last-of-type{ border-bottom: none; }
+.mobile-menu-panel a svg{ opacity: .4; width: 16px; height: 16px; }
+
+.mobile-menu-cta{ margin-top: 18px; display: flex; }
+.mobile-menu-cta .btn{ width: 100%; }
+
+@media (max-width: 768px) {
+  .header-cta .btn-primary {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
